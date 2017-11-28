@@ -74,6 +74,18 @@
     }
     
     {
+        _amountLabel = [UILabel new];
+        [self addSubview:_amountLabel];
+        
+        _amountLabel.textColor = [UIColor blackColor];
+        _amountLabel.textAlignment = NSTextAlignmentCenter;
+        _amountLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:12.0];
+        _amountLabel.numberOfLines = 1;
+        _amountLabel.minimumScaleFactor = 0.5;
+        _amountLabel.adjustsFontSizeToFitWidth = YES;
+    }
+    
+    {
         UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTouch)];
         
         self.userInteractionEnabled = YES;
@@ -85,7 +97,13 @@
 {
     [super layoutSubviews];
     
-    _textLabel.frame = self.bounds;
+    if (_isFirstDay) {
+        CGRect newFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width * 2, self.frame.size.height);
+        self.frame = newFrame;
+    }
+    
+    _textLabel.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height / 2);
+    _amountLabel.frame = CGRectMake(0, self.bounds.size.height/2, self.bounds.size.width, self.bounds.size.height / 2);
     
     CGFloat sizeCircle = MIN(self.frame.size.width, self.frame.size.height);
     CGFloat sizeDot = sizeCircle;

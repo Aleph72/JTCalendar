@@ -18,11 +18,14 @@
 @property (nonatomic, readonly) UIView *circleView;
 @property (nonatomic, readonly) UIView *dotView;
 @property (nonatomic, readonly) UILabel *textLabel;
+@property (nonatomic, readonly) UILabel *amountLabel;
 
 @property (nonatomic) CGFloat circleRatio;
 @property (nonatomic) CGFloat dotRatio;
 
 @property (nonatomic) BOOL isFromAnotherMonth;
+
+@property (nonatomic) BOOL isFirstDay;
 
 /*!
  * Must be call if override the class
