@@ -86,6 +86,13 @@
     }
     
     {
+        _lineView = [UIView new];
+        [self addSubview:_lineView];
+        
+        _lineView.backgroundColor = [UIColor clearColor];
+    }
+    
+    {
         UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTouch)];
         
         self.userInteractionEnabled = YES;
@@ -102,8 +109,12 @@
         self.frame = newFrame;
     }
     
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithFloat:self.frame.size.height] forKey:@"dayHeight"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+//    NSLog(@"Day height: %.2f", self.frame.size.height);
     _textLabel.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height / 2);
     _amountLabel.frame = CGRectMake(0, self.bounds.size.height/2, self.bounds.size.width, self.bounds.size.height / 2);
+    _lineView.frame = CGRectMake(2.0, self.bounds.size.height-3, self.bounds.size.width-2, 3.0);
     
     CGFloat sizeCircle = MIN(self.frame.size.width, self.frame.size.height);
     CGFloat sizeDot = sizeCircle;
