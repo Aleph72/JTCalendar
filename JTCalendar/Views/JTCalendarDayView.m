@@ -79,7 +79,7 @@
         
         _amountLabel.textColor = [UIColor blackColor];
         _amountLabel.textAlignment = NSTextAlignmentCenter;
-        _amountLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:12.0];
+        _amountLabel.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:13.0];
         _amountLabel.numberOfLines = 1;
         _amountLabel.minimumScaleFactor = 0.5;
         _amountLabel.adjustsFontSizeToFitWidth = YES;
