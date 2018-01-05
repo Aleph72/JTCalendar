@@ -19,6 +19,7 @@
 @property (nonatomic, readonly) UIView *dotView;
 @property (nonatomic, readonly) UILabel *textLabel;
 @property (nonatomic, readonly) UILabel *amountLabel;
+@property (nonatomic, readonly) UILabel *kmLabel;
 @property (nonatomic, readonly) UIView *lineView;
 
 @property (nonatomic) CGFloat circleRatio;
