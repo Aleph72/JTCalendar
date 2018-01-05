@@ -145,6 +145,9 @@
     _dotView.frame = CGRectMake(0, 0, sizeDot, sizeDot);
     _dotView.center = CGPointMake(self.frame.size.width / 2., (self.frame.size.height / 2.) +sizeDot * 2.5);
     _dotView.layer.cornerRadius = sizeDot / 2.;
+    
+    self.layer.borderWidth = 0.5f;
+    self.layer.borderColor = [UIColor colorWithRed:195.0/255.0 green:206.0/255.0 blue:225.0/255.0 alpha:1.0].CGColor;
 }
 
 - (void)setDate:(NSDate *)date
