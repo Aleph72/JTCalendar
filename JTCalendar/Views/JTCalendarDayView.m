@@ -86,6 +86,18 @@
     }
     
     {
+        _kmLabel = [UILabel new];
+        [self addSubview:_kmLabel];
+        
+        _kmLabel.textColor = [UIColor blackColor];
+        _kmLabel.textAlignment = NSTextAlignmentCenter;
+        _kmLabel.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:13.0];
+        _kmLabel.numberOfLines = 1;
+        _kmLabel.minimumScaleFactor = 0.5;
+        _kmLabel.adjustsFontSizeToFitWidth = YES;
+    }
+    
+    {
         _lineView = [UIView new];
         [self addSubview:_lineView];
         
@@ -114,6 +126,7 @@
 //    NSLog(@"Day height: %.2f", self.frame.size.height);
     _textLabel.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height / 2);
     _amountLabel.frame = CGRectMake(0, self.bounds.size.height/2, self.bounds.size.width, self.bounds.size.height / 2);
+    _kmLabel.frame = CGRectMake(0, KKmLabelYPosition, self.bounds.size.width, 15);
     _lineView.frame = CGRectMake(2.0, self.bounds.size.height-3, self.bounds.size.width-2, 3.0);
     
     CGFloat sizeCircle = MIN(self.frame.size.width, self.frame.size.height);
