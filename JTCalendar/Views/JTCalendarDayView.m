@@ -125,7 +125,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 //    NSLog(@"Day height: %.2f", self.frame.size.height);
     _textLabel.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height / 2);
-    _amountLabel.frame = CGRectMake(0, self.bounds.size.height/2, self.bounds.size.width, self.bounds.size.height / 2);
+    _amountLabel.frame = CGRectMake(0, KAmountLabelYPosition, self.bounds.size.width, 15);
     _kmLabel.frame = CGRectMake(0, KKmLabelYPosition, self.bounds.size.width, 15);
     _lineView.frame = CGRectMake(2.0, self.bounds.size.height-3, self.bounds.size.width-2, 3.0);
     
