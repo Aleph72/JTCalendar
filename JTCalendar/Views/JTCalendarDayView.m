@@ -121,6 +121,7 @@
         self.frame = newFrame;
     }
     
+    self.cellHeight = self.frame.size.height;
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithFloat:self.frame.size.height] forKey:@"dayHeight"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 //    NSLog(@"Day height: %.2f", self.frame.size.height);
