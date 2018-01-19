@@ -21,6 +21,7 @@
 @property (nonatomic, readonly) UILabel *amountLabel;
 @property (nonatomic, readonly) UILabel *kmLabel;
 @property (nonatomic, readonly) UIView *lineView;
+@property (nonatomic) CGFloat cellHeight;
 
 @property (nonatomic) CGFloat circleRatio;
 @property (nonatomic) CGFloat dotRatio;
